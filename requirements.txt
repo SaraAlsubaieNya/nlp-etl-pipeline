@@ -9,3 +9,4 @@ wordcloud==1.9.4
 lxml==4.9.4
 vaderSentiment
 transformers
+torch
