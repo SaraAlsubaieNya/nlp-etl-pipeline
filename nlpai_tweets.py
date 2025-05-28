@@ -34,10 +34,10 @@ from wordcloud import WordCloud
 plt.style.use('default')
 sns.set_palette("husl")
 
-from google.colab import files
-uploaded = files.upload()
-filename = list(uploaded.keys())[0]
-print(f"Uploaded file: {filename}")
+filename = 'Final Tweets.csv'
+print(f"Loading dataset from: {filename}")
+
+df = pd.read_csv(filename)
 
 df = pd.read_csv(filename)
 
@@ -98,7 +98,7 @@ df['cleaned_text'] = df[text_col].apply(clean_text)
 feature_cols = ['word_count', 'char_count', 'hashtag_count', 'mention_count', 'url_count']
 df[feature_cols] = df[text_col].apply(get_text_features)
 
-print("✅ Text cleaning completed!")
+print("Text cleaning completed!")
 print(f"Sample cleaned text:\n{df['cleaned_text'].iloc[0]}")
 
 #i fixed the dataset here
