@@ -2,31 +2,32 @@ name: Run My Pipeline
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # Every 3 hours
-  workflow_dispatch:  # Allows manual running
+    - cron: '0 */3 * * *'  # every 3 hours
+  workflow_dispatch:  # allows manual trigger
 
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Get my code
+    - name: Checkout code
       uses: actions/checkout@v3
-      
-    - name: Setup Python
+
+    - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: '3.11'
-        
-    - name: Install packages
+
+    - name: Install dependencies
       run: |
-        pip install -r req.txt
+        pip install -r requirements.txt
         python -m textblob.download_corpora
-        
-    - name: Run my pipeline
+        python -m nltk.downloader stopwords punkt vader_lexicon
+
+    - name: Run sentiment pipeline
       run: python nlpai_tweets.py
-      
-    - name: Save results back
+
+    - name: Commit and push results
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
