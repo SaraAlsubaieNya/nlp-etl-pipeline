@@ -1,0 +1,35 @@
+name: Run My Pipeline
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # Every 3 hours
+  workflow_dispatch:  # Allows manual running
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Get my code
+      uses: actions/checkout@v3
+      
+    - name: Setup Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'
+        
+    - name: Install packages
+      run: |
+        pip install -r req.txt
+        python -m textblob.download_corpora
+        
+    - name: Run my pipeline
+      run: python pipeline.py
+      
+    - name: Save results back
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git diff --staged --quiet || git commit -m "Updated data on $(date)"
+        git push
