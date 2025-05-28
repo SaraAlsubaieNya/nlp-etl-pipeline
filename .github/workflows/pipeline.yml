@@ -24,7 +24,7 @@ jobs:
         python -m textblob.download_corpora
         
     - name: Run my pipeline
-      run: python pipeline.py
+      run: python nlpai_tweets.py
       
     - name: Save results back
       run: |
