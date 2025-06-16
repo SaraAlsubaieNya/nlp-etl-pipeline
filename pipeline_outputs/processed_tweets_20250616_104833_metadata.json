@@ -1,0 +1,28 @@
+{
+  "pipeline_config": {
+    "batch_size": 100,
+    "max_text_length": 512,
+    "output_format": "csv",
+    "enable_logging": true,
+    "log_level": "INFO",
+    "retry_attempts": 3,
+    "transformer_model": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+    "output_dir": "./pipeline_outputs",
+    "enable_validation": true
+  },
+  "execution_stats": {
+    "start_time": "2025-06-16 10:16:45.814855",
+    "end_time": "2025-06-16 10:48:33.680943",
+    "total_records": 25235,
+    "processed_records": 25235,
+    "failed_records": 0,
+    "processing_time": 1907.866088
+  },
+  "execution_summary": {
+    "total_records": 25235,
+    "successfully_processed": 25235,
+    "failed_records": 0,
+    "success_rate": 100.0,
+    "processing_speed": 13.226819302844069
+  }
+}
