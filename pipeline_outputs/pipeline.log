@@ -18358,3 +18358,57 @@
 2025-07-14 02:12:28,975 - __main__ - INFO - Processing Time: 1893.31 seconds
 2025-07-14 02:12:28,975 - __main__ - INFO - Processing Speed: 13.3 records/second
 2025-07-14 02:12:28,975 - __main__ - INFO -  Pipeline completed successfully!
+2025-07-14 04:35:19,091 - __main__ - INFO - Pipeline initialized successfully
+2025-07-14 04:35:19,091 - __main__ - INFO - 🚀 Starting AI Tweet Sentiment Analysis Pipeline
+2025-07-14 04:35:19,092 - __main__ - INFO - Starting data extraction from: Final Tweets.csv
+2025-07-14 04:35:19,159 - __main__ - INFO - Successfully extracted 25235 records
+2025-07-14 04:35:19,159 - __main__ - INFO - Validating input data...
+2025-07-14 04:35:19,160 - __main__ - INFO - Data validation passed. Using text column: Tweets
+2025-07-14 04:35:19,160 - __main__ - INFO - Starting data transformation...
+2025-07-14 04:35:19,161 - __main__ - INFO - Applying text preprocessing...
+2025-07-14 04:35:20,011 - __main__ - INFO - Performing sentiment analysis...
+2025-07-14 04:35:20,011 - __main__ - INFO - Loading transformer model: cardiffnlp/twitter-roberta-base-sentiment-latest
+2025-07-14 04:35:20,210 - transformers.modeling_utils - WARNING - Some weights of the model checkpoint at cardiffnlp/twitter-roberta-base-sentiment-latest were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2025-07-14 04:35:20,318 - transformers.pipelines.base - WARNING - Device set to use cpu
+2025-07-14 04:35:20,318 - __main__ - INFO - Transformer model loaded successfully
+2025-07-14 04:36:33,425 - __main__ - INFO - Processed 1000/25235 records
+2025-07-14 04:37:42,387 - __main__ - INFO - Processed 2000/25235 records
+2025-07-14 04:38:51,532 - __main__ - INFO - Processed 3000/25235 records
+2025-07-14 04:40:01,875 - __main__ - INFO - Processed 4000/25235 records
+2025-07-14 04:41:19,543 - __main__ - INFO - Processed 5000/25235 records
+2025-07-14 04:42:39,997 - __main__ - INFO - Processed 6000/25235 records
+2025-07-14 04:43:53,817 - __main__ - INFO - Processed 7000/25235 records
+2025-07-14 04:45:17,582 - __main__ - INFO - Processed 8000/25235 records
+2025-07-14 04:46:42,068 - __main__ - INFO - Processed 9000/25235 records
+2025-07-14 04:48:00,821 - __main__ - INFO - Processed 10000/25235 records
+2025-07-14 04:49:11,959 - __main__ - INFO - Processed 11000/25235 records
+2025-07-14 04:50:22,394 - __main__ - INFO - Processed 12000/25235 records
+2025-07-14 04:51:24,871 - __main__ - INFO - Processed 13000/25235 records
+2025-07-14 04:52:32,975 - __main__ - INFO - Processed 14000/25235 records
+2025-07-14 04:53:50,358 - __main__ - INFO - Processed 15000/25235 records
+2025-07-14 04:55:08,360 - __main__ - INFO - Processed 16000/25235 records
+2025-07-14 04:56:18,083 - __main__ - INFO - Processed 17000/25235 records
+2025-07-14 04:57:32,497 - __main__ - INFO - Processed 18000/25235 records
+2025-07-14 04:58:47,663 - __main__ - INFO - Processed 19000/25235 records
+2025-07-14 05:00:02,250 - __main__ - INFO - Processed 20000/25235 records
+2025-07-14 05:01:18,005 - __main__ - INFO - Processed 21000/25235 records
+2025-07-14 05:02:32,131 - __main__ - INFO - Processed 22000/25235 records
+2025-07-14 05:03:45,390 - __main__ - INFO - Processed 23000/25235 records
+2025-07-14 05:05:01,853 - __main__ - INFO - Processed 24000/25235 records
+2025-07-14 05:06:20,212 - __main__ - INFO - Processed 25000/25235 records
+2025-07-14 05:06:37,079 - __main__ - INFO - Transformation completed in 1877.92 seconds
+2025-07-14 05:06:37,079 - __main__ - INFO - Starting data loading...
+2025-07-14 05:06:37,428 - __main__ - INFO - Pipeline metadata saved to: ./pipeline_outputs/processed_tweets_20250714_050637_metadata.json
+2025-07-14 05:06:37,428 - __main__ - INFO - Data successfully loaded to: ./pipeline_outputs/processed_tweets_20250714_050637.csv
+2025-07-14 05:06:37,428 - __main__ - INFO - ============================================================
+2025-07-14 05:06:37,428 - __main__ - INFO -  PIPELINE EXECUTION SUMMARY
+2025-07-14 05:06:37,428 - __main__ - INFO - ============================================================
+2025-07-14 05:06:37,429 - __main__ - INFO - Total Records: 25,235
+2025-07-14 05:06:37,429 - __main__ - INFO - Successfully Processed: 25,235
+2025-07-14 05:06:37,429 - __main__ - INFO - Failed Records: 0
+2025-07-14 05:06:37,429 - __main__ - INFO - Success Rate: 100.0%
+2025-07-14 05:06:37,429 - __main__ - INFO - Processing Time: 1877.92 seconds
+2025-07-14 05:06:37,429 - __main__ - INFO - Processing Speed: 13.4 records/second
+2025-07-14 05:06:37,429 - __main__ - INFO -  Pipeline completed successfully!
